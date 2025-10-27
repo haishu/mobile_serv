@@ -31,8 +31,9 @@ class SimpleHttpServer {
         final mimeType = lookupMimeType(f.path) ?? 'application/octet-stream';
 
         String icon;
-        if (mimeType.startsWith('video/')) icon = '🎬';
-        else if (mimeType.startsWith('image/')) icon = '🖼️';
+        if (mimeType.startsWith('video/')) {
+          icon = '🎬';
+        } else if (mimeType.startsWith('image/')) icon = '🖼️';
         else if (mimeType.startsWith('text/') || mimeType == 'application/pdf') icon = '📄';
         else icon = '📦';
 
